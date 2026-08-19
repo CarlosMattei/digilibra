@@ -44,7 +44,7 @@ const createNameSpellingScene = (userName: string): Scene => {
     character: {
       name: "Zara",
       dialogue: `Agora é sua vez! Tente soletrar o seu nome "${userName}" selecionando as letras na ordem correta!`,
-      image: "/characters/Zara-nobackground.png",
+      image: "/characters/zara-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#00C864",
     },
@@ -147,7 +147,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Zara",
       dialogue: "Olá! Bem-vindo ao setor! Eu sou a Zara, me comunico em Libras. Vamos aprender juntos? Primeiro, vou soletrar meu nome...",
-      image: "/characters/Zara-nobackground.png",
+      image: "/characters/zara-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#00C864",
     },
@@ -163,7 +163,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Zara",
       dialogue: "Excelente! Você conseguiu soletrar seu nome em Libras! 🎉 Prazer em conhecê-lo, {userName}!",
-      image: "/characters/Zara-nobackground.png",
+      image: "/characters/zara-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#00C864",
     },
@@ -185,7 +185,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Timmy",
       dialogue: "Oi, {userName}! Sou o Timmy, também estou aprendendo Libras. Você quer aprender qual é a programação do dia?",
-      image: "/characters/Timmy-nobackground.png",
+      image: "/characters/timmy-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#3168E0",
     },
@@ -204,7 +204,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Zara",
       dialogue: "Vou mostrar o dia de hoje! Preste atenção nos gestos enquanto eu soletro as palavras... REUNIÃO, CAFÉ, PAUSA, ALMOÇO. Qual é a primeira palavra que você viu?",
-      image: "/characters/Zara-nobackground.png",
+      image: "/characters/zara-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#00C864",
     },
@@ -223,7 +223,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Timmy",
       dialogue: "Legal! Você acertou REUNIÃO! Agora tente identificar a terceira palavra que Zara mostrou... PAUSA!",
-      image: "/characters/Timmy-nobackground.png",
+      image: "/characters/timmy-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#3168E0",
     },
@@ -242,7 +242,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Zara",
       dialogue: "Parabéns! Você aprendeu as palavras do dia! Timmy e você estão indo muito bem!",
-      image: "/characters/Zara-nobackground.png",
+      image: "/characters/zara-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#00C864",
     },
@@ -264,7 +264,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Zara",
       dialogue: "Agora vamos aprender cores e objetos! Vou apontar para coisas ao meu redor e você tenta soletrar a cor correta em Libras!",
-      image: "/characters/Zara-nobackground.png",
+      image: "/characters/zara-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#00C864",
     },
@@ -280,7 +280,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Zara",
       dialogue: "Primeira cor: Minha caneta é... AZUL! Tente soletrar!",
-      image: "/characters/Zara-nobackground.png",
+      image: "/characters/zara-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#00C864",
     },
@@ -299,7 +299,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Zara",
       dialogue: "Ótimo! Agora a segunda cor: A mesa é... MARROM! Tente soletrar!",
-      image: "/characters/Zara-nobackground.png",
+      image: "/characters/zara-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#00C864",
     },
@@ -318,7 +318,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Timmy",
       dialogue: "Parabéns, {userName}! Você acertou as cores! Zara ficou impressionada com seu desempenho!",
-      image: "/characters/Timmy-nobackground.png",
+      image: "/characters/timmy-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#3168E0",
     },
@@ -340,7 +340,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Zara",
       dialogue: "Agora vamos praticar pedir ajuda! Você precisa encontrar algo na mesa, mas não sabe o nome em Libras. Vou te ensinar!",
-      image: "/characters/Zara-nobackground.png",
+      image: "/characters/zara-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#00C864",
     },
@@ -356,7 +356,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Zara",
       dialogue: "Você quer encontrar uma CANETA. Tente soletrar a palavra corretamente!",
-      image: "/characters/Zara-nobackground.png",
+      image: "/characters/zara-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#00C864",
     },
@@ -375,7 +375,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Zara",
       dialogue: "Excelente! Agora procure uma IMPRESSORA. Essa é mais longa, mas você consegue!",
-      image: "/characters/Zara-nobackground.png",
+      image: "/characters/zara-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#00C864",
     },
@@ -394,7 +394,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Timmy",
       dialogue: "Incrível! {userName}, você conseguiu soletrar IMPRESSORA! Zara está impressionada com seu progresso!",
-      image: "/characters/Timmy-nobackground.png",
+      image: "/characters/timmy-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#3168E0",
     },
@@ -416,7 +416,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Zara",
       dialogue: "Você aprendeu muito hoje! Que tal a gente se encontrar AMANHÃ para aprender mais Libras? Tente soletrar AMANHÃ!",
-      image: "/characters/Zara-nobackground.png",
+      image: "/characters/zara-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#00C864",
     },
@@ -435,7 +435,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Zara",
       dialogue: "Perfeito! Agora, a que hora? MANHÃ ou TARDE? Tente soletrar MANHÃ!",
-      image: "/characters/Zara-nobackground.png",
+      image: "/characters/zara-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#00C864",
     },
@@ -454,7 +454,7 @@ export const zaraStories: Record<string, Scene> = {
     character: {
       name: "Timmy",
       dialogue: "Combinado! Amanhã de manhã nós nos encontramos para aprender mais com Zara! Você foi incrível hoje!",
-      image: "/characters/Timmy-nobackground.png",
+      image: "/characters/timmy-nobackground.png",
       background: "/backgrounds/office.jpg",
       badgeColor: "#3168E0",
     },
