@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+<img src="./public/logo.svg" alt="Digilibra Screenshot" width="300"/>
+</div>
 
-## Getting Started
+<p align="center">
+  <em>Aprenda Libras jogando. Pratique com propósito.</em>
+</p>
 
-First, run the development server:
+<p align="center">
+  <a href="https://digilibra.vercel.app" target="_blank"><strong>🎮 Jogar agora</strong></a> |
+  <a href="#sobre">Sobre</a>
+</p>
+
+---
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="TailwindCSS" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
+</div>
+
+---
+
+<div align="center">
+  <img src="./public/image.png" alt="Digilibra Screenshot" width="600"/>
+</div>
+
+---
+
+## 📖 Sobre
+
+Digilibra é um web game imersivo que democratiza o aprendizado de Libras através da experiência interativa. Navegue pelos cenários da empresa ACME, conheça seus funcionários e principalmente **Zara**, uma colaboradora surda que será sua mentora nessa jornada.
+
+**O diferencial:** Combinamos narrativa envolvente, desafios gamificados e prática contextualizada para tornar o aprendizado de Libras natural, divertido e significativo.
+
+---
+
+## ✨ Funcionalidades
+
+- 🎮 **Gameplay Interativo**: Diálogos dinâmicos com personagens da ACME
+- 👩‍💼 **Mentoria com Propósito**: Aprenda diretamente com Zara, uma profissional surda
+- 📚 **Aprendizado Contextualizado**: Pratique Libras em cenários reais do cotidiano corporativo
+- 🎯 **Desafios Progressivos**: Evolua em dificuldade conforme avança na história
+- ♿ **Desenho Inclusivo**: Interface acessível e respeitosa com a comunidade surda
+- 📱 **Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
+
+---
+
+## 🚀 Começar a Jogar
+
+Acesse **[digilibra.vercel.app](https://digilibra.vercel.app)** e comece sua jornada de aprendizado agora!
+
+Não precisa de instalação ou configuração — é só clicar e jogar.
+
+---
+
+## 🛠️ Para Desenvolvedores
+
+### Pré-requisitos
+- Node.js 18+ instalado
+- npm ou yarn
+
+### Instalação Local
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone o repositório
+git clone https://github.com/seu-usuario/digilibra.git
+cd digilibra
+
+# Instale as dependências
+npm install
+# ou
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Desenvolvimento
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Inicie o servidor de desenvolvimento
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver as mudanças em tempo real.
 
-## Learn More
+### Build & Deploy
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Build para produção
+npm run build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Testar build localmente
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+O projeto é automaticamente deployado na Vercel a cada push para a branch `main`.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
