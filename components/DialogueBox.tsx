@@ -71,7 +71,7 @@ export default function DialogueBox({
 
   return (
     <div
-      className={`relative z-20 flex w-full flex-col justify-between p-5 sm:p-6 md:p-8 bg-[#262626] transition-all duration-300 shadow-2xl lg:rounded-none lg:h-full lg:max-w-md xl:max-w-lg ${
+      className={`relative z-20 flex w-full flex-col justify-between p-5 sm:p-6 md:p-8 bg-[#262626] transition-all duration-300 shadow-2xl lg:rounded-none lg:h-full lg:max-w-md xl:max-w-lg overflow-y-auto ${
         feedback === "success"
           ? "ring-2 ring-emerald-500 shadow-emerald-500/20"
           : feedback === "error"

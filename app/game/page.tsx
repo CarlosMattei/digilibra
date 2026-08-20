@@ -1,22 +1,48 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { createStoryData } from "@/data/story";
 import CharacterView from "@/components/CharacterView";
 import DialogueBox from "@/components/DialogueBox";
 import ConfirmExitModal from "@/components/ConfirmExitModal";
 import BackgroundMusic from "@/components/BackgroundMusic";
 import { GameFeedbackState } from "@/types/game";
+import { saveGameProgress, loadGameProgress, clearGameProgress } from "@/lib/game-progress";
 
 export default function GamePage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [currentSceneId, setCurrentSceneId] = useState<string>("scene_welcome");
   const [userName, setUserName] = useState<string>("");
   const [userSequence, setUserSequence] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<GameFeedbackState>("idle");
   const [isExitModalOpen, setIsExitModalOpen] = useState<boolean>(false);
   const [errorCount, setErrorCount] = useState<number>(0);
+
+  // Load saved progress on mount (skip if restart=true)
+  useEffect(() => {
+    if (searchParams.get("restart") === "true") {
+      clearGameProgress();
+      return;
+    }
+    const saved = loadGameProgress();
+    if (saved) {
+      setUserName(saved.userName);
+      setCurrentSceneId(saved.sceneId);
+    }
+  }, [searchParams]);
+
+  // Save progress whenever scene changes (skip initial welcome)
+  useEffect(() => {
+    if (currentSceneId === "scene_welcome" && !userName) return;
+    // Game looped back to start — clear saved progress
+    if (currentSceneId === "scene_welcome" && userName) {
+      clearGameProgress();
+      return;
+    }
+    saveGameProgress(currentSceneId, userName);
+  }, [currentSceneId, userName]);
 
   const storyData = createStoryData(userName);
   const currentScene = storyData[currentSceneId] || storyData["scene_welcome"] || Object.values(storyData)[0];
@@ -134,7 +160,7 @@ export default function GamePage() {
   };
 
   return (
-    <main className="relative flex min-h-dvh w-full items-center justify-center bg-[#121212] lg:p-6 select-none overflow-x-hidden">
+    <main className="relative flex min-h-dvh w-full items-center justify-center bg-[#121212] lg:p-6 select-none overflow-hidden">
       {/* Background Ambience for Desktop */}
       <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-blue-600/10 blur-[120px] hidden lg:block" />
 

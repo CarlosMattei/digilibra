@@ -1,14 +1,46 @@
 "use client";
 
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import DigiLibraSVG from "@/components/DigiLibraSVG";
 import BackgroundMusic from "@/components/BackgroundMusic";
 import MusicPreferenceModal from "@/components/MusicPreferenceModal";
 import MusicToggle from "@/components/MusicToggle";
+import ContinueGameModal from "@/components/ContinueGameModal";
+import { loadGameProgress, clearGameProgress } from "@/lib/game-progress";
 
 
 export default function Home() {
+  const router = useRouter();
+  const [hasSavedProgress, setHasSavedProgress] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const progress = loadGameProgress();
+    setHasSavedProgress(!!progress);
+  }, []);
+
+  const handleIniciar = useCallback(() => {
+    if (hasSavedProgress) {
+      setIsModalOpen(true);
+    } else {
+      router.push("/game");
+    }
+  }, [hasSavedProgress, router]);
+
+  const handleContinue = useCallback(() => {
+    setIsModalOpen(false);
+    router.push("/game");
+  }, [router]);
+
+  const handleRestart = useCallback(() => {
+    clearGameProgress();
+    setHasSavedProgress(false);
+    setIsModalOpen(false);
+    router.push("/game?restart=true");
+  }, [router]);
   return (
     
     <main className="relative flex min-h-dvh w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#0e43b8] via-[#000] to-[#000] px-6 py-6 sm:px-8 sm:py-10 md:px-12 lg:px-20">
@@ -40,10 +72,10 @@ export default function Home() {
           {/* Action Buttons Box */}
           <div className="flex w-full flex-col gap-3.5 rounded-[28px] p-3 bg-[#2D2D2D] shadow-2xl backdrop-blur-sm">
             <Button
-              asChild
+              onClick={handleIniciar}
               className="h-16 rounded-full bg-[#2563EB] text-2xl sm:text-3xl font-bold text-white transition-all duration-200 hover:bg-[#1d4ed8] active:scale-[0.98]"
             >
-              <Link href="/game">Iniciar</Link>
+              Iniciar
             </Button>
 
             <Button
@@ -61,6 +93,12 @@ export default function Home() {
       </div>
 
       <MusicPreferenceModal />
+
+      <ContinueGameModal
+        isOpen={isModalOpen}
+        onContinue={handleContinue}
+        onRestart={handleRestart}
+      />
     </main>
   );
 }
