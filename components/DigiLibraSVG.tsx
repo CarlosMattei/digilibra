@@ -17,7 +17,7 @@ interface DigiLibraSVGProps {
  */
 export default function DigiLibraSVG({
   className,
-  animationDurationMs = 7433,
+  animationDurationMs = 6283,
 }: DigiLibraSVGProps) {
   const objectRef = useRef<HTMLObjectElement>(null);
 
